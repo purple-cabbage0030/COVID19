@@ -18,7 +18,6 @@ elif platform.system() == 'Darwin':
 else:
     print('Check your OS system')
 
-
 class Crawling():
     def crawl_covid():
         browser = webdriver.Chrome("c:/driver/chromedriver.exe")
@@ -109,17 +108,17 @@ class Crawling():
         finally:
             time.sleep(3)
             browser.quit()
-
         
         try:
             df = pd.read_excel("covid19.xlsx")
+
             df["tot_cases"] = df["tot_cases"].str.replace(",", "")
             df["new_cases"] = df["new_cases"].str.replace("+", "")
             df["new_cases"] = df["new_cases"].str.replace(",", "")
             df["tot_deaths"] = df["tot_deaths"].str.replace(",", "")
-            df["new_deaths"] = df["new_deaths"].replace("+", "")
-            df["new_deaths"] = df["new_deaths"].replace(",", "")
-            df["new_deaths"] = df["new_deaths"].replace(" ", "")
+            df["new_deaths"] = df["new_deaths"].str.replace("+", "")
+            df["new_deaths"] = df["new_deaths"].str.replace(",", "")
+            df["new_deaths"] = df["new_deaths"].str.replace(" ", "")
             df["tot_recov"] = df["tot_recov"].str.replace(",", "")
             df["new_recov"] = df["new_recov"].str.replace("+", "")
             df["new_recov"] = df["new_recov"].str.replace(",", "")
@@ -152,30 +151,17 @@ class Crawling():
             df.loc[79,"country"] = "Greenland" # Greenland
             df.loc[129,"country"] = "Micronesia (Federated States of)" #Micronesia
 
-
-
+        except Exception as e:
+            print("페이지 파싱 에러", e)
+        
+        finally:
+            col = ["country", "tot_cases", "new_cases", "tot_deaths", "new_deaths", "tot_recov", "new_recov", "tests", "pop", "2019"]
             covid_gdp_1 = pd.merge(df, gdp_pop, how="left", on="country")
             covid_gdp_1 = covid_gdp_1.dropna(axis=0)
             covid_gdp_1 = covid_gdp_1.astype({"2019":"int64"})
+            covid_gdp_1.columns = col
+            covid_gdp_1.to_csv("covid_gdp.csv", index = False)
             
-        except Exception as e:
-            print("페이지 파싱 에러", e)
-        finally:
-            covid_gdp_1.columns = ["country", "tot_cases", "new_cases", "tot_deaths", "new_deaths", "tot_recov", "new_recov", "tests", "pop", "2019"]
-            covid_gdp_1.to_excel("./covid_gdp.xlsx", index = False)
-        
 
-
-
-    def visual1():
-        path = "c:/Windows/Fonts/malgun.ttf"
-        font_name = font_manager.FontProperties(fname = path).get_name()
-        rc("font", family = font_name)
-
-        df = pd.read_excel("covid19.xlsx")
-
-
-if __name__ == "__main__":
-    Crawling.crawl_covid()
-    # Crawling.crawl_gdp()
-    # pass
+# if __name__ == "__main__":
+#     Crawling.crawl_covid()
