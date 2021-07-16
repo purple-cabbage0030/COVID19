@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: #5c5c5c;
+        }
+        </style>
+</head>
+<body>
+    <h1>코로나 시각화</h1>
+    <ul>
+        <li><a class="active" onclick="chart_view()">코로나</a></li>
+        <li><a onclick="">백신</a></li>
+    </ul>
+        <div id="covid" style="display: none;"><iframe src="http://localhost:5601/app/visualize#/edit/53b14a90-e642-11eb-838d-099ee244669e?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-15m%2Cto%3Anow))" height="600" width="800"></iframe></div>
+    <script>
+
+        function chart_view() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("covid").style.display = 'block';
+                }
+            };
+            xhttp.open("GET", "covidchart");
+            xhttp.send();
+        }
+
+    </script>
+</body>
+</html>
