@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc
 import numpy as np
 import platform
+import requests
 
 if platform.system() == 'Windows':
     path = 'c:/Windows/Fonts/malgun.ttf'
