@@ -1,2 +1,42 @@
-# COVID19
- 코로나/백신 관련 시각화 team
+# 🏥 COVID19 Analysis & Visualization
+
+
+<ol>
+  <h2><li> 🖋️ Contributors: </h2>
+  <br>
+   😄 <a href="https://github.com/Hyunsoo-Ryan-Lee">이현수</a><br>
+   <ul>
+    <li>   </li>
+    <li>   </li>
+   </ul><br>
+   🤡 <a href="https://github.com/purple-cabbage0030">이홍주</a>
+   <ul>
+    <li>   </li>
+    <li>  </li>
+   </ul><br>
+  🥰 <a href="https://github.com/dilatata"></a>정주영</li>
+    <ul>
+    <li>   </li>
+    <li>   </li>
+   </ul>
+ <h2><li> 📆 Project period: 2021/07/10 - 2021/07/18</h2></li>
+ <h2><li> 🤝 Coding convention </h2>
+   <details><summary> Rules </summary>
+       1. 연산자 앞뒤 공백 <br>
+       2. 함수명, 변수명 스네이크 케이스로 작성 <br>
+       3. 문자열 큰따옴표 사용 통일 <br>
+       4. 협업자가 이해할 수 있도록 주석은 자세하게 <br>
+   </details>
+  </li>
+  <h2><li> 💻 Project outline 👉 <a href="https://github.com/Sparkling-data/COVID19/blob/main/covid19-visualization.pdf"> web prototype </a></h2></li>
+
+ <h2><li>🏃 Working Process</h2></li>
+1. 주제 선정 및 oven을 이용한 웹 페이지 구상<br><br>
+2. 기능 개발 역할 분담<br><br>
+3. crawler.py -> data 저장 -> app.py, templates 의 모듈별 개발 및 데이터 시각화 진행 <br><br>
+4. flask 연동 및 기능 test
+ 
+ <h2><li> 🛠️ Future Improvements </h2></li>
+
+ 
+</ol>
