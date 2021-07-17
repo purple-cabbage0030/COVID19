@@ -6,8 +6,8 @@
   <br>
    😄 <a href="https://github.com/Hyunsoo-Ryan-Lee">이현수</a><br>
    <ul>
-    <li>   </li>
-    <li>   </li>
+    <li>국내 일일/종류별 백신 접종 현황 자료 수집 및 전처리</li>
+    <li>전세계 백신 접종률 관련 자료 수집 및 전처리</li>
    </ul><br>
    🤡 <a href="https://github.com/purple-cabbage0030">이홍주</a>
    <ul>
