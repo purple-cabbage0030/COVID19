@@ -11,8 +11,8 @@
    </ul><br>
    🤡 <a href="https://github.com/purple-cabbage0030">이홍주</a>
    <ul>
-    <li>   </li>
-    <li>  </li>
+    <li>flask 연동 구조 개발</li>
+    <li>데이터 전처리 및 시각화</li>
    </ul><br>
   🥰 <a href="https://github.com/dilatata"></a>정주영</li>
     <ul>
