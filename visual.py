@@ -13,7 +13,7 @@ class Visual():
                 covid_gdp = pd.read_csv("./covid_gdp.csv")
                 covid_gdp.info()
 
-                covid_gdp_head30 = covid_gdp.sort_values(by=['2019'], ascending=False).head(30)
+                covid_gdp_head30 = covid_gdp.sort_values(by=['2019_gdp'], ascending=False).head(30)
 
                 plt.style.use('default')
                 plt.rcParams['figure.figsize'] = (15, 10)
@@ -40,7 +40,7 @@ class Visual():
                 covid_gdp = pd.read_csv("./covid_gdp.csv")
                 covid_gdp.info()
 
-                covid_gdp_tail30 = covid_gdp.sort_values(by=['2019'], ascending=True).head(30)
+                covid_gdp_tail30 = covid_gdp.sort_values(by=['2019_gdp'], ascending=True).head(30)
 
                 plt.style.use('default')
                 plt.rcParams['figure.figsize'] = (15,10)
@@ -73,7 +73,7 @@ class Visual():
                         'new_recov',
                         'tests',
                         'pop',
-                        '2019',
+                        '2019_gdp',
                         'tot_recov_1m',
                         'tot_cases_1m',
                         'tot_deaths_1m',
