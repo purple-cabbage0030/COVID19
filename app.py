@@ -35,7 +35,7 @@ def confirm():
         confirm_visual[conf.iloc[i,0]] = conf.iloc[i,1]
     stylecloud.gen_stylecloud(text=confirm_visual,icon_name="fas fa-certificate",
                         palette="colorbrewer.diverging.Spectral_11",background_color='black',
-                        gradient="horizontal",output_name="confirm.jpg")
+                        gradient="horizontal",output_name="./static/image/confirm.jpg")
     return "confirm.jpg"
 
 @app.route('/death', methods=['post'])
@@ -46,7 +46,7 @@ def death():
         confirm_visual[conf.iloc[i,0]] = conf.iloc[i,3]
     stylecloud.gen_stylecloud(text=confirm_visual,icon_name="fas fa-skull-crossbones",
                         palette="colorbrewer.diverging.Spectral_11",background_color='black',
-                        gradient="horizontal",output_name="death.jpg")
+                        gradient="horizontal",output_name="./static/image/death.jpg")
     return "death.jpg"
 
 @app.route('/vaccine', methods=['post'])
@@ -57,7 +57,7 @@ def vaccine():
         confirm_visual[conf.iloc[i,0]] = conf.iloc[i,13]
     stylecloud.gen_stylecloud(text=confirm_visual,icon_name="fas fa-thermometer",
                         palette="colorbrewer.diverging.Spectral_11",background_color='black',
-                        gradient="horizontal",output_name="vaccine.jpg")
+                        gradient="horizontal",output_name="./static/image/vaccine.jpg")
     return "vaccine.jpg"
 
 @app.route('/gdp', methods=['post'])
@@ -68,7 +68,7 @@ def gdp():
         confirm_visual[conf.iloc[i,0]] = conf.iloc[i,9]
     stylecloud.gen_stylecloud(text=confirm_visual,icon_name="fas fa-money-bill-wave-alt",
                         palette="colorbrewer.diverging.Spectral_11",background_color='black',
-                        gradient="horizontal",output_name="gdp.jpg")
+                        gradient="horizontal",output_name="./static/image/gdp.jpg")
     return "gdp.jpg"
 
 @app.route('/population', methods=['post'])
@@ -79,7 +79,7 @@ def population():
         confirm_visual[conf.iloc[i,0]] = conf.iloc[i,8]
     stylecloud.gen_stylecloud(text=confirm_visual,icon_name="fas fa-certificate",
                         palette="colorbrewer.diverging.Spectral_11",background_color='black',
-                        gradient="horizontal",output_name="population.jpg")
+                        gradient="horizontal",output_name="./static/image/population.jpg")
     return "population.jpg"
 
 
