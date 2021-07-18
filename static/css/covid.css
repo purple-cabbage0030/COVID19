@@ -83,3 +83,25 @@ section {
     background: #dadadf;
     padding: 2em 12em;
 }
+
+
+#chart{
+    width: 90%;
+    margin: 10px auto;
+}
+
+#view1{
+    float: left;
+    width: 30%;
+}
+
+#view2{
+    float: left;
+    margin-left: 10%;
+    width:30%;
+}
+
+#view3{
+    float: right;
+    width: 30%;
+}
