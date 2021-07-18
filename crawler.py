@@ -223,7 +223,9 @@ class Crawling():
 
         # total_vaccine.csv 파일 읽어 코로나-GDP merge된 파일과 merge
         covid_gdp = pd.read_csv('covid_gdp.csv')
-        pd.merge(covid_gdp, vac_data, how="left", on="country").to_csv("merge_vaccine.csv", index = False)
+        merge_data = pd.merge(covid_gdp, vac_data, how="left", on="country")
+        merge_data = merge_data.fillna(0)
+        merge_data.to_csv("merge_vaccine.csv", index = False)
 
     def kor_vaccine():
         # 중앙방역대책본부 사이트에서 매일 업데이트되는 백신별 일일 접종 현황 파일 다운로드
@@ -258,5 +260,5 @@ class Crawling():
         datas.to_csv("kor_vaccine.csv", index = False)
 
 
-# if __name__ == "__main__":
-#     Crawling.crawl_covid()
+if __name__ == "__main__":
+    Crawling.world_vaccine()
