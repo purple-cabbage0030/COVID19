@@ -66,7 +66,7 @@ def gdp():
     conf = pd.read_csv('merge_vaccine.csv')
     for i in range(len(conf)):
         confirm_visual[conf.iloc[i,0]] = conf.iloc[i,9]
-    stylecloud.gen_stylecloud(text=confirm_visual,icon_name="fas fa-money-bill-wave-alt",
+    stylecloud.gen_stylecloud(text=confirm_visual,icon_name="fas fa-sack",
                         palette="colorbrewer.diverging.Spectral_11",background_color='black',
                         gradient="horizontal",output_name="./static/img/gdp.jpg")
     return "gdp.jpg"
