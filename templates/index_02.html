@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/covid.css')}}">
+    <script src="{{url_for('static' , filename='js/covid.js')}}"></script>
+</head>
+
+<body>
+    <h1>코로나 시각화</h1>
+    <nav role="navigation">
+        <ul id="main-menu">
+            <li><a href="#" class="active" onclick="chart_view()">코로나</a></li>
+            <li><a href="#">백신</a></li>
+            <li><a href="#">Word Cloud</a>
+                <ul id="sub-menu">
+                    <li><a href="#" id='confirm'>국가-확진자</a></li>
+                    <li><a href="#" id='death'>국가-사망자</a></li>
+                    <li><a href="#" id='vaccine'>국가-백신접종</a></li>
+                    <li><a href="#" id='gdp'>국가-GDP</a></li>
+                    <li><a href="#" id='population'>국가-인구</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+</body>
+
+</html>
