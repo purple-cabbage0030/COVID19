@@ -86,7 +86,7 @@ section {
 
 
 #chart{
-    width: 90%;
+    width: 100%;
     margin: 10px auto;
 }
 
@@ -97,7 +97,7 @@ section {
 
 #view2{
     float: left;
-    margin-left: 10%;
+    margin-left: 5%;
     width:30%;
 }
 
