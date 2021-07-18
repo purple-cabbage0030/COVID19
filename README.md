@@ -16,8 +16,8 @@
    </ul><br>
   🥰 <a href="https://github.com/dilatata"></a>정주영</li>
     <ul>
-    <li>   </li>
-    <li>   </li>
+    <li>국내 일일/종류별 코로나 현황 자료 수집 및 전처리</li>
+    <li>데이터 전처리 및 시각화</li>
    </ul>
  <h2><li> 📆 Project period: 2021/07/10 - 2021/07/18</h2></li>
  <h2><li> 🤝 Coding convention </h2>
