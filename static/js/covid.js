@@ -89,3 +89,32 @@ function chart_view() {
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
 }
+
+function kor_vac() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            aa = this.responseText
+            alert("국내 백신 접종 현황 업데이트 완료!")
+            document.getElementById("view").style.display = 'none';
+            document.getElementById("chart").style.display = 'none';
+            document.getElementById("korea").innerHTML = '<img src="./static/img/kor_vaccine.png" width=95%>'
+        }
+    };
+    xhttp.open("post", "kor_vac");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+};
+
+function world_vac() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            bb = this.responseText
+            alert("전세계 백신 접종 현황 업데이트 완료!")
+        }
+    };
+    xhttp.open("post", "world_vac");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+};
