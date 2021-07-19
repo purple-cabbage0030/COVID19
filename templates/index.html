@@ -7,6 +7,7 @@
     <title>코로나 시각화</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/covid.css')}}">
     <script src="{{url_for('static', filename='js/covid.js')}}"></script>
+
 </head>
 <body>
     <h1>코로나 시각화</h1>
@@ -28,8 +29,10 @@
                     <li><a href="#" onclick="population()">국가-인구</a></li>
                 </ul>
             </li>
+
         </ul>
     </nav>
+
     <div id="view" style="display: block;"></div>
     <div id="korea" style="display: block;"></div>
     <div id = "chart" style="display: block;">
@@ -37,6 +40,37 @@
         <div id='view2'></div>
         <div id='view3'></div>
     </div>
+    <script>
+        // function show_img() {
+        //     const xhttp = new XMLHttpRequest();
+        //     xhttp.onreadystatechange = function () {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             img_name = this.responseText;
+        //             url_data = '<img src="./static/img/'+img_name+'.jpg" width="600" height="500">';
+        //             alert(img_name);
+        //             // console.log(url_data);
+        //             document.getElementById("view").innerHTML = url_data;
+        //         }
+        //     };
+        //     xhttp.open("POST", "image");
+        //     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //     query = "img_name=" + document.getElementById("sub-menu").value;
+        //     console.log(query)
+        //     xhttp.send(query);
+        // }
 
+
+        // function chart_view() {
+        //     const xhttp = new XMLHttpRequest();
+        //     xhttp.onreadystatechange = function () {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             document.getElementById("covid").style.display = 'block';
+        //         }
+        //     };
+        //     xhttp.open("GET", "covidchart");
+        //     xhttp.send();
+        // }
+
+    </script>
 </body>
 </html>
