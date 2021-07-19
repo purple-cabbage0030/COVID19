@@ -106,6 +106,7 @@ function kor_vac() {
     xhttp.send();
 };
 
+
 function world_vac() {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
