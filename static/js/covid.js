@@ -3,7 +3,7 @@ function confirm() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             img_name = this.responseText
-            document.getElementById("view").innerHTML = '<img src="./static/img/'+img_name+ '" width=500 height=400>'
+            document.getElementById("view").innerHTML = '<img src="./static/img/confirm.jpg" width=500 height=400>'
         }
     };
     xhttp.open("POST", "confirm");
@@ -16,7 +16,7 @@ function death() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             img_name = this.responseText
-            document.getElementById("view").innerHTML = '<img src="./static/img/'+img_name+ '" width=500 height=400>'
+            document.getElementById("view").innerHTML = '<img src="./static/img/death.jpg" width=500 height=400>'
         }
     };
     xhttp.open("POST", "death");
@@ -29,7 +29,7 @@ function vaccine() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             img_name = this.responseText
-            document.getElementById("view").innerHTML = '<img src="./static/img/'+img_name+ '" width=500 height=400>'
+            document.getElementById("view").innerHTML = '<img src="./static/img/vaccine.jpg" width=500 height=400>'
         }
     };
     xhttp.open("POST", "vaccine");
@@ -42,7 +42,7 @@ function gdp() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             img_name = this.responseText
-            document.getElementById("view").innerHTML = '<img src="./static/img/'+img_name+ '" width=500 height=400>'
+            document.getElementById("view").innerHTML = '<img src="./static/img/gdp.jpg" width=500 height=400>'
         }
     };
     xhttp.open("POST", "gdp");
@@ -55,7 +55,7 @@ function population() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             img_name = this.responseText
-            document.getElementById("view").innerHTML = '<img src="./static/img/'+img_name+ '" width=500 height=400>'
+            document.getElementById("view").innerHTML = '<img src="./static/img/population.jpg" width=500 height=400>'
         }
     };
     xhttp.open("POST", "population");
