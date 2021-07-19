@@ -68,6 +68,7 @@ function chart_view() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             img_name = this.responseText
+            document.getElementById("view").style.display = 'none';
             document.getElementById("view1").innerHTML = '<img src="./static/img/covid_gdp_plot1.png" width=95%>'
             document.getElementById("view2").innerHTML = '<img src="./static/img/covid_gdp_plot2.png" width=95%>'
             document.getElementById("view3").innerHTML = '<img src="./static/img/covid_gdp_plot3.png" width=95%>'
