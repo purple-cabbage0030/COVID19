@@ -102,18 +102,22 @@ def kor_vac():
     driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div[3]/div[2]/ul/li/a').click()
     time.sleep(4)  
     driver.close()
+
     # 코로나 바이러스 백신별 접종현황 파일 읽어오기
     file_name = os.listdir("C:/Users/YEIN/Downloads")
+
     for file in file_name:
         if file.startswith('코로나바이러스'):
             file_name = file
     datas = pd.read_excel(r'C:/Users/YEIN/Downloads/{}'.format(file_name))
+    
     # 컬럼명 설정 및 전처리
     d_columns = ['일자','ALL(1)','ALL(FIN)','아제(1)','아제(FIN)','화이자(1)','화이자(FIN)','얀센','모더나(1)','모더나(FIN)']
     datas = datas.drop(index=[0,1,2,3,4,5], axis=0)
     datas.columns = d_columns
     datas = datas.reset_index()
     del datas['index']
+
     # kor_vaccine.csv 파일로 저장
     datas.to_csv("kor_vaccine.csv", index = False)
     df = pd.read_csv('kor_vaccine.csv')
@@ -147,6 +151,7 @@ def world_vac():
     pyautogui.press('enter')
     time.sleep(1)  
     driver.close()
+
     # vaccinations.csv 파일 읽고 전처리
     world_vac = pd.read_csv(r'C:/Users/YEIN/Downloads/vaccinations.csv')
     world_vac = world_vac.fillna(0)
@@ -161,6 +166,7 @@ def world_vac():
     'Scotland', 'Sint Maarten (Dutch part)', 'South America', 'Taiwan', 'Turks and Caicos Islands',
     'Upper middle income', 'Wales', 'Wallis and Futuna', 'World','Bonaire Sint Eustatius and Saba', 
     'Egypt', 'Kyrgyzstan', 'Nauru', 'Syria', 'Tonga', 'Turkmenistan','Tuvalu', 'Venezuela']
+
     n_index = []
     for i in range(len(g1)):
         for j in range(len(del_nat)):
@@ -179,7 +185,7 @@ def world_vac():
     vac_data.loc[59,"country"] = 'Gambia (Republic of The)'
     vac_data.loc[67,"country"] = 'Guinea Bissau'
     vac_data.loc[74,"country"] = 'Iran (Islamic Republic of)'
-    vac_data.loc[85,"country"] = "Lao People's Democratic Republic"
+    vac_data.loc[85,"country"] = 'Lao People’s Democratic Republic'
     vac_data.loc[103,"country"] = 'Republic of Moldova'
     vac_data.loc[130,"country"] = 'Russian Federation'
     vac_data.loc[149,"country"] = 'Republic of Korea'
@@ -187,8 +193,10 @@ def world_vac():
     vac_data.loc[159,"country"] = 'Timor-Leste'
     vac_data.loc[168,"country"] = 'United States of America'
     vac_data.loc[172,"country"] = 'Viet Nam'
+
     # 백신 관련(전처리 finish) data csv 파일로 저장
     vac_data.to_csv("total_vaccine.csv", index = False)
+
     # total_vaccine.csv 파일 읽어 코로나-GDP merge된 파일과 merge
     covid_gdp = pd.read_csv('covid_gdp.csv')
     merge_data = pd.merge(covid_gdp, vac_data, how="left", on="country")
