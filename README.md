@@ -36,7 +36,7 @@
 3. crawler.py -> data 저장 -> app.py, templates 의 모듈별 개발 및 데이터 시각화 진행 <br><br>
 4. flask 연동 및 기능 test
  
- <h2><li> 🛠️ Future Improvements </h2></li>
+ <h2><li><a href="https://sprinkle-fireplace-626.notion.site/COVID19-statistics-analysis-visualization-6befaba8ff5b415a9d8dd4778a87d814"> 💙 Notion Link 💙 </a></h2></li>
 
  
 </ol>
